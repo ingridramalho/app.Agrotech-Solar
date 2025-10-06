@@ -1,204 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <header>
-    <div>
-      <span>AgroTech Solar</span>
-    </div>
-
-  </header>
-
-  <section>
-    <div>
-      <h1>Mini Lavoura Automatizada</h1>
-      <p>Uma inteligência de automação agrícola com energia solar para otimizar luz, temperatura e irrigação.</p>
-    </div>
-    <div>
-      <img src="trator.png" alt="" width="250">
-    </div>
-  </section>
-
-  <section>
-    <h2>INTRODUÇÃO</h2>
-    <div>
-      <img src="lavoura.png" alt="" width="300">
-      <div>
-        <h3>Objetivo:</h3>
-        <p>Otimizar o cultivo com uso consciente de energia e água, oferecendo uma solução acessível a agricultores de todos os portes.</p>
-      </div>
-
-      <div>
-        <h3>Público-alvo:</h3>
-        <p>Pequenos, médios e grandes produtores, cooperativas e estudantes de agronomia.</p>
-      </div>
-
-      <div>
-        <h3>Nosso diferencial:</h3>
-        <ul>
-          <li>Energia 100% renovável com painéis solares integrados.</li>
-          <li>Sensores de umidade, luminosidade e temperatura que monitoram o solo em tempo real.</li>
-          <li>Aplicativo próprio para controle remoto e acompanhamento dos dados.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f8faf9;
-  color: #2f4f37;
-  line-height: 2.2; /* aumenta altura das linhas */
-  padding: 60px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 40px;
-}
-
-header img {
-  height: 35px;
-  margin-right: 10px;
-}
-
-header nav ul {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: #2f4f37;
-  font-weight: 500;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px;
-}
-
-.hero-text h1 {
-  font-size: 2.2rem;
-  color: #2f4f37;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  font-size: 1rem;
-  color: #4a5d4e;
-  max-width: 450px;
-}
-
-.introducao {
-  padding: 80px 40px;
-}
-
-.introducao h2 {
-  font-size: 1.5rem;
-  color: #2f4f37;
-  margin-bottom: 80px; 
-}
-
-.intro-content {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-}
-
-.intro-content img {
-  width: 280px;
-  border-radius: 12px;
-}
-
-.intro-text {
-  max-width: 600px;
-}
-
-.intro-text h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #2f4f37;
-}
-
-.intro-text p, 
-.intro-text li {
-  margin-bottom: 85px; 
-  font-size: 1rem;
-  color: #333;
-}
-
-.intro-text ul {
-  list-style: none;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
-  }
-
-  .intro-content {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .intro-content img {
-    width: 100%;
-    max-width: 350px;
-    margin-bottom: 25px;
-  }
-}
-
-@media (max-width: 375px) {
-  body {
-    padding: 15px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-text p {
-    font-size: 0.95rem;
-  }
-
-  .introducao h2 {
-    font-size: 1.3rem;
-  }
-
-  .intro-text p,
-  .intro-text li {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-  }
-}
-  </style>
-
+  <title>AgroTech Solar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class="container">
+    <h1>AgroTech Solar</h1>
 
-  <script>
-     
-  </script>
+    <section class="card-tempo">
+      <div class="card-informacoes">
+        <div>
+          <h2>18°C</h2>
+          <p>Nublado</p>
+        </div>
+        <div class="icon">⛅</div>
+      </div>
+
+      <div class="detalhes">
+        <div>
+          <p>Umidade</p>
+          <span>Bom</span>
+        </div>
+        <div>
+          <p>Umidade do Solo</p>
+          <span>Bom</span>
+        </div>
+        <div>
+          <p>Precipitação</p>
+          <span>Baixa</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gerenciamento">
+      <h2>Gerencie seus campos</h2>
+
+      <input type="checkbox" id="sensores-toggle">
+      <label class="acordeao" for="sensores-toggle">🌾 Sensores</label>
+      <div class="painel">
+
+        <div class="sensores">
+          <h4>Sensor de Umidade de Solo</h4>
+          <p><strong>Captação de umidade:</strong> Umidade detectada</p>
+          <div class="alerta">
+            <strong>ALERTA ⚠️</strong>
+            <p>A irrigação não será ativada, se houver a falta de umidade no solo a <strong>irrigação</strong> será ativada.</p>
+          </div>
+        </div>
+
+        <div class="sensores">
+          <h4>Sensor de Temperatura DHT11</h4>
+          <p><strong>Captação de temperatura:</strong> Temperatura muito alta - solo seco</p>
+          <div class="alerta">
+            <strong>ALERTA ⚠️</strong>
+            <p>A <strong>temperatura</strong> está muito alta, consequentemente o solo está seco, a <strong>irrigação</strong> será ativada.</p>
+          </div>
+        </div>
+
+        <div class="sensores">
+          <h4>Sensor de Chuva</h4>
+          <p><strong>Captação de chuva:</strong> Está chovendo</p>
+          <div class="alerta">
+            <strong>ALERTA ⚠️</strong>
+            <p>O <strong>teto solar</strong> será fechado, caso a chuva pare o <strong>teto solar</strong> será aberto.</p>
+          </div>
+        </div>
+
+        <div class="sensores">
+          <h4>Sensor de Luminosidade</h4>
+          <p><strong>Captação de luz:</strong> Baixa luminosidade</p>
+          <div class="alerta">
+            <strong>ALERTA ⚠️</strong>
+            <p>O <strong>led</strong> será desligado, se a luminosidade for aumentada o sensor será ligado.</p>
+          </div>
+        </div>
+      </div>
+
+      <input type="checkbox" id="painel-toggle">
+      <label class="acordeao" for="painel-toggle">🔆 Painel Solar</label>
+      <div class="painel">
+        <h3> Painel Solar</h3>
+        <p>Todo sistema do nosso protótipo é recarregado por energia solar.</p>
+        <ul>
+          <li>Local que não recebe <strong>luz solar</strong> é recarregado na tomada.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+
+<style>
+body {
+  background-color: #91A59A;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #24372E;
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  color: #1E3B33;
+  margin-bottom: 75px;
+}
+
+.card-tempo {
+  background-color: #6E877A;
+  padding: 20px;
+  border-radius: 10px;
+  color: #334E3F;
+}
+
+.card-informacoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-informacoes h2 {
+  margin: 0;
+  color: #334E3F;
+}
+
+.card-informacoes p {
+  margin: 0;
+  color: #BFCFBB;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.detalhes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.detalhes div {
+  text-align: center;
+}
+
+.detalhes span {
+  background-color: #546C5E;
+  padding: 5px 15px;
+  border-radius: 10px;
+  display: inline-block;
+  color: #fff;
+}
+
+.gerenciamento {
+  background-color: #819A8A;
+  margin-bottom: 60px;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 30px;
+
+}
+
+.gerenciamento h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.acordeao {
+  display: block;
+  width: 100%;
+  background-color: #6E877A;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.acordeao:hover {
+  background-color: #5C7568;
+}
+
+.painel {
+  background-color: #6E877A;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#sensores-toggle:checked ~ .painel:nth-of-type(1),
+#painel-toggle:checked ~ .painel:nth-of-type(2) {
+  display: block;
+}
+
+.sensores {
+  background-color: #819A8A;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.alerta {
+  background-color: #546C5E;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  margin-top: 10px;
+}
+</style>
+
 </body>
 </html>
