@@ -16,7 +16,6 @@
           <h2>18°C</h2>
           <p>Nublado</p>
         </div>
-        <div class="icon">⛅</div>
       </div>
 
       <div class="detalhes">
@@ -39,14 +38,14 @@
       <h2>Gerencie seus campos</h2>
 
       <input type="checkbox" id="sensores-toggle">
-      <label class="acordeao" for="sensores-toggle">🌾 Sensores</label>
+      <label class="acordeao" for="sensores-toggle">Sensores</label>
       <div class="painel">
 
         <div class="sensores">
           <h4>Sensor de Umidade de Solo</h4>
           <p><strong>Captação de umidade:</strong> Umidade detectada</p>
           <div class="alerta">
-            <strong>ALERTA ⚠️</strong>
+            <strong>ALERTA</strong>
             <p>A irrigação não será ativada, se houver a falta de umidade no solo a <strong>irrigação</strong> será ativada.</p>
           </div>
         </div>
@@ -55,7 +54,7 @@
           <h4>Sensor de Temperatura DHT11</h4>
           <p><strong>Captação de temperatura:</strong> Temperatura muito alta - solo seco</p>
           <div class="alerta">
-            <strong>ALERTA ⚠️</strong>
+            <strong>ALERTA</strong>
             <p>A <strong>temperatura</strong> do ambiente da lavoura está muito alta, consequentemente o solo está seco, a <strong>irrigação</strong> será ativada.</p>
           </div>
         </div>
@@ -64,7 +63,7 @@
           <h4>Sensor de Chuva</h4>
           <p><strong>Captação de chuva:</strong> Está chovendo</p>
           <div class="alerta">
-            <strong>ALERTA ⚠️</strong>
+            <strong>ALERTA</strong>
             <p>O <strong>teto solar</strong> será fechado, caso a chuva pare o <strong>teto solar</strong> será aberto.</p>
           </div>
         </div>
@@ -73,14 +72,14 @@
           <h4>Sensor de Luminosidade</h4>
           <p><strong>Captação de luz:</strong> Baixa luminosidade</p>
           <div class="alerta">
-            <strong>ALERTA ⚠️</strong>
+            <strong>ALERTA</strong>
             <p>O <strong>led</strong> será desligado, se a luminosidade for aumentada o sensor será ligado.</p>
           </div>
         </div>
       </div>
 
       <input type="checkbox" id="painel-toggle">
-      <label class="acordeao" for="painel-toggle">🔆 Painel Solar</label>
+      <label class="acordeao" for="painel-toggle">Painel Solar</label>
       <div class="painel">
         <p>Todo sistema do nosso protótipo é recarregado por energia solar.</p>
         <ul>
@@ -94,7 +93,6 @@
 <style>
 body {
   background-color: #91A59A;
-  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   color: #24372E;
@@ -129,7 +127,7 @@ h1 {
 .card-informacoes div:first-child {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* força à esquerda */
+  align-items: flex-start;
 }
 
 .card-informacoes h2 {
@@ -142,11 +140,6 @@ h1 {
   color: #BFCFBB;
   text-align: center;
   margin-bottom: 20px;
-}
-
-.icon {
-  font-size: 40px;
-  margin-left: 20px;
 }
 
 .detalhes {
