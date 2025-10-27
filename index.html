@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>AgroTech Solar</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet' href='style.css'>
 </head>
 <body>
-  <div class="container">
+  <div class='container'>
     <h1>AgroTech Solar</h1>
 
-    <section class="card-tempo">
-      <div class="card-informacoes">
+    <section class='card-tempo'>
+      <div class='card-informacoes'>
         <div>
           <h2>18°C</h2>
-          <p>Nublado</p>
         </div>
+        <div class='icone-tempo'>🌥️</div>
       </div>
 
-      <div class="detalhes">
+      <div class='detalhes'>
         <div>
           <p>Umidade</p>
           <span>Bom</span>
@@ -28,59 +28,67 @@
           <span>Bom</span>
         </div>
         <div>
-          <p>Precipitação</p>
-          <span>Baixa</span>
         </div>
       </div>
     </section>
 
-    <section class="gerenciamento">
+    <section class='gerenciamento'>
       <h2>Gerencie seus campos</h2>
 
-      <input type="checkbox" id="sensores-toggle">
-      <label class="acordeao" for="sensores-toggle">Sensores</label>
-      <div class="painel">
+      <input type='checkbox' id='sensores-toggle'>
+      <label class='acordeao' for='sensores-toggle'>Sensores</label>
+      <div class='painel'>
 
-        <div class="sensores">
+        <div class='sensores'>
           <h4>Sensor de Umidade de Solo</h4>
           <p><strong>Captação de umidade:</strong> Umidade detectada</p>
-          <div class="alerta">
-            <strong>ALERTA</strong>
-            <p>A irrigação não será ativada, se houver a falta de umidade no solo a <strong>irrigação</strong> será ativada.</p>
+          <div class='alerta'>
+            <strong>⚠️  ALERTA</strong>
+            <p>A irrigação não será ativada, se houver a falta de umidade no solo a irrigação será ativada.</p>
           </div>
         </div>
 
-        <div class="sensores">
+        <div class='sensores'>
           <h4>Sensor de Temperatura DHT11</h4>
           <p><strong>Captação de temperatura:</strong> Temperatura muito alta - solo seco</p>
-          <div class="alerta">
-            <strong>ALERTA</strong>
-            <p>A <strong>temperatura</strong> do ambiente da lavoura está muito alta, consequentemente o solo está seco, a <strong>irrigação</strong> será ativada.</p>
+          <div class='alerta'>
+            <strong>⚠️  ALERTA</strong>
+            <p>A temperatura do ambiente da lavoura está muito alta, por causa disso o solo está seco, a irrigação será ativada.</p>
           </div>
         </div>
 
-        <div class="sensores">
+        <div class='sensores'>
           <h4>Sensor de Chuva</h4>
           <p><strong>Captação de chuva:</strong> Está chovendo</p>
-          <div class="alerta">
-            <strong>ALERTA</strong>
-            <p>O <strong>teto solar</strong> será fechado, caso a chuva pare o <strong>teto solar</strong> será aberto.</p>
+          <div class='alerta'>
+            <strong>⚠️  ALERTA</strong>
+            <p>O teto solar será fechado, caso a chuva pare o teto solar será aberto.</p>
           </div>
         </div>
 
-        <div class="sensores">
+        <div class='sensores'>
           <h4>Sensor de Luminosidade</h4>
           <p><strong>Captação de luz:</strong> Baixa luminosidade</p>
-          <div class="alerta">
-            <strong>ALERTA</strong>
-            <p>O <strong>led</strong> será desligado, se a luminosidade for aumentada o sensor será ligado.</p>
+          <div class='alerta'>
+            <strong>⚠️  ALERTA</strong>
+            <p>O led será desligado, se a luminosidade for aumentada o sensor será ligado.</p>
           </div>
         </div>
       </div>
 
-      <input type="checkbox" id="painel-toggle">
-      <label class="acordeao" for="painel-toggle">Painel Solar</label>
-      <div class="painel">
+
+  
+<div class='menu-hamburguer' id='menuBtn'>
+  &#9776;
+  <span class='notificacao' id='alertCount'>0</span>
+</div>
+
+
+
+   <div>
+      <input type='checkbox' id='painel-toggle'>
+      <label class='acordeao' for='painel-toggle'>Painel Solar</label>
+      <div class='painel'>
         <p>Todo sistema do nosso protótipo é recarregado por energia solar.</p>
         <ul>
           <li>Local que não recebe <strong>luz solar</strong> é recarregado na tomada.</li>
@@ -92,6 +100,7 @@
 
 <style>
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: #91A59A;
   margin: 0;
   padding: 0;
@@ -115,6 +124,10 @@ h1 {
   border-radius: 10px;
   color: #334E3F;
   margin-bottom: 80px;
+}
+
+.icone-tempo {
+  font-size: 45px;
 }
 
 .card-informacoes {
@@ -144,13 +157,21 @@ h1 {
 
 .detalhes {
   display: flex;
-  justify-content: space-around;
-  margin-top: 15px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-left: 20px;
+  transform: translateX(70px);
+  transform: translateX(-10px); 
 }
 
-.detalhes div {
+  .detalhes div {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
   text-align: center;
 }
+
 
 .detalhes span {
   background-color: #546C5E;
@@ -214,12 +235,15 @@ h1 {
   color: #334E3F;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
 }
 
-#sensores-toggle:checked ~ .painel:nth-of-type(1),
-#painel-toggle:checked ~ .painel:nth-of-type(2) {
+#sensores-toggle:checked + .acordeao + .painel {
+  display: block;
+}
+
+#painel-toggle:checked + .acordeao + .painel {
   display: block;
 }
 
@@ -235,7 +259,7 @@ input[type="checkbox"] {
 }
 
 .sensores strong {
-  color: #D4DDD2;
+  color: #334e3f;
 }
 
 .alerta {
@@ -245,7 +269,72 @@ input[type="checkbox"] {
   color: #fff;
   margin-top: 10px;
 }
+
+.menu-hamburguer {
+  position: fixed;
+  top: 20px;
+  left: 20px; 
+  font-size: 22px; 
+  cursor: pointer;
+  color: #24372E;
+  background: none; 
+  padding: 5px;
+  border: none;
+  z-index: 1000;
+}
+
+.menu-hamburguer .notificacao {
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: none;
+}
+
+.painel-alertas {
+  position: fixed;
+  top: 0;
+  right: -300px; 
+  width: 300px;
+  height: 100%;
+  background-color: #6E877A;
+  color: #fff;
+  padding: 20px;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  overflow-y: auto; 
+}
+
+.painel-alertas.aberto {
+  right: 0;
+}
+
+.painel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.painel-header button {
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+#alertaConteudo {
+  background-color: #546C5E;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
 </style>
 
-</body>
-</html>
+<main> <section class='info'></section> </main><script> let Socket; const button = document.querySelector('button'); button.addEventListener('click', sendMessage); const section = document.querySelector('.info'); function init() { Socket = new WebSocket(`ws://${window.location.hostname}:81`); Socket.onmesage = (message) => { section.innerHTML = `<p>${message.data}</p>` }; } function sendMessage() { Socket.send('Mensagem linda para o ESP32!'); } init();
+
